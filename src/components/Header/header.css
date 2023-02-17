@@ -1,0 +1,135 @@
+header {
+    background-color: #333;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+}
+
+.header-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+}
+
+.nav-brand {
+    position: relative;
+    display: flex;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #08d;
+    margin: 0 40px;
+
+}
+
+.nav-menu {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    width: 400px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav-menu-icon {
+    display: none;
+}
+
+.button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #08d;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.item a:hover {
+    color: #08d;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 10px;
+    }
+
+    .header-nav {
+        position: relative;
+        display: inline;
+        width: 100%;
+    }
+
+    .nav-brand {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+
+    .nav-menu {
+        position: relative;
+        width: 100%;
+        background-color: #333;
+        height: 0;
+        flex-direction: column;
+        transition: all 0.3s ease;
+    }
+
+    .nav-menu li {
+        display: none;
+    }
+
+    .nav-menu-icon {
+        position: relative;
+        display: block;
+        float: left;
+        margin: 0 20px;
+        font-size: 40px;
+        z-index: 2;
+        cursor: pointer;
+
+    }
+
+    .nav-menu.show {
+        height: 200px;
+    }
+
+
+    .nav-menu.show li {
+        display: inline;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+
+    .button {
+        display: none;
+    }
+
+    .nav-menu.show~.button {
+        display: inline;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
